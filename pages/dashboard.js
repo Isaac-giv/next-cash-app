@@ -172,12 +172,13 @@ export default function Dashboard() {
           </p>
         </div>
           <button
-             onClick={handleLogout}
-            className="flex items-center gap-2 text-red-600 border border-red-300 hover:bg-red-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            onClick={handleLogout}
+            className="text-red-500 hover:text-red-700 p-2 rounded-full hover:bg-red-50 transition"
+            title="Sign Out"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            Sign Out
           </button>
       </div>
 
