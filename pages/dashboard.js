@@ -179,6 +179,7 @@ export default function Dashboard() {
               <path fillRule="evenodd" d="M10 2a1 1 0 011 1v6a1 1 0 11-2 0V3a1 1 0 011-1z" clipRule="evenodd" />
               <path fillRule="evenodd" d="M5 8a5 5 0 1110 0v4a5 5 0 11-10 0V8zm5-3a3 3 0 00-3 3v4a3 3 0 106 0V8a3 3 0 00-3-3z" clipRule="evenodd" />
             </svg>
+            Sign Out
           </button>
       </div>
 
