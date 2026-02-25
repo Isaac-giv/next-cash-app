@@ -171,15 +171,14 @@ export default function Dashboard() {
             {userProfile ? userProfile.fullName : user.email}
           </p>
         </div>
-        <button
-           onClick={handleLogout}
-            className="flex items-center gap-2 bg-red-500 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105 shadow-md"
-          >
+          <button
+             onClick={handleLogout}
+            className="flex items-center gap-2 text-red-600 border border-red-300 hover:bg-red-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
             </svg>
             Sign Out
-        </button>
+          </button>
       </div>
 
       {/* Enhanced Balance Card */}
