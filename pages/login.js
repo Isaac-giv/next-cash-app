@@ -29,32 +29,51 @@ export default function Login() {
 
   return (
     <Layout>
-      <div className="max-w-md mx-auto bg-white/90 backdrop-blur-sm shadow-xl rounded-lg p-6">
-        <h1 className="text-2xl font-bold mb-6">Login</h1>
-        {error && <p className="text-red-500 mb-4">{error}</p>}
-        <form onSubmit={handleSubmit} className='max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 p-8'>
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">Email</label>
+      <div className="animate-fadeIn max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+        {/* Header with icon */}
+        <div className="text-center mb-6">
+          <span className="text-5xl">🔐</span>
+          <h1 className="text-3xl font-bold text-gray-800 mt-2">Welcome Back</h1>
+          <p className="text-gray-500 text-sm">Sign in to your account</p>
+        </div>
+
+        {/* Error message */}
+        {error && (
+          <div className="bg-red-50 text-red-600 p-3 rounded-lg mb-4 text-sm border border-red-200">
+            {error}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit}>
+          {/* Email field with icon */}
+          <div className="relative mb-4">
+            <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">📧</span>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full p-2 border border-gray-300 rounded"
+              placeholder="Email address"
+              className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
             />
           </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">Password</label>
+
+          {/* Password field with icon */}
+          <div className="relative mb-6">
+            <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">🔒</span>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full p-2 border border-gray-300 rounded"
+              placeholder="Password"
+              className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
             />
           </div>
+
+          {/* Gradient button with loading state */}
           <button
-            type='submit'
+            type="submit"
             disabled={loading}
             className={`w-full py-3 rounded-full font-semibold text-white transition-all transform hover:scale-[1.02] active:scale-[0.98] ${
               loading
@@ -65,8 +84,13 @@ export default function Login() {
             {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>
-        <p className="mt-4 text-center">
-          Don't have an account? <Link href="/" className="text-blue-600">Register</Link>
+
+        {/* Link to register page */}
+        <p className="mt-6 text-center text-gray-600">
+          Don't have an account?{' '}
+          <Link href="/register" className="text-blue-600 font-semibold hover:text-blue-700 hover:underline transition">
+            Create one
+          </Link>
         </p>
       </div>
     </Layout>
