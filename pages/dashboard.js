@@ -173,7 +173,7 @@ export default function Dashboard() {
         </div>
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 text-red-600 border border-red-300 hover:bg-red-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            className="flex items-center gap-2 text-red-600 border border-red-300 hover:bg-red-50 px-4 py-2 rounded-lg text-sm font-bold transition-colors"
             >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
