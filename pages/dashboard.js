@@ -140,7 +140,7 @@ export default function Dashboard() {
     return (
       <Layout>
         <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-800"></div>
         </div>
       </Layout>
     );
@@ -155,7 +155,7 @@ export default function Dashboard() {
       <Layout>
         <div className="flex flex-col justify-center items-center h-64">
           <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500 mb-4"></div>
-          <p className="text-gray-500 text-sm">Loading your data...</p>
+          <p className="text-black-500 text-l">Loading your data...</p>
         </div>
       </Layout>
     );
